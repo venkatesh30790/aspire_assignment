@@ -33,9 +33,10 @@ public class Assignment_Class {
 
 	@BeforeTest
 	public static void setDriver() throws InterruptedException {
-		      
-
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Widas Venkatesh\\eclipse-workspace\\aspire_assignment\\src\\main\\resources\\drivers\\geckodriver.exe");
+		String path = System.getProperty("user.dir");
+		System.out.println(path); 
+		
+		System.setProperty("webdriver.gecko.driver", path+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 
 		//Creating an object of ChromeDriver
 		driver = new FirefoxDriver();
